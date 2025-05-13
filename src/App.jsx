@@ -7,6 +7,8 @@ function App() {
   const[actress, setActress] = useState([]);
   const[actor, setActor] = useState([]);
 
+  const stars=[...actress, ...actor];
+
   const fetchActress = () => {
     axios.get("https://lanciweb.github.io/demo/api/actresses/").then((response) => {
       setActress(response.data);
@@ -26,8 +28,8 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        {/* Migliori Attrici */}
+      {/* <div className="container">
+        Migliori Attrici
         <div>
           <h1>STELLE DEL CINEMA</h1>
           <h2>-LE MIGLIORI-</h2>
@@ -50,7 +52,7 @@ function App() {
             </div>
           ))}
         </div>
-        {/* Migliori Attori */}
+        Migliori Attori
         <div>
             <h2>-I MIGLIORI-</h2>
         </div>
@@ -72,6 +74,30 @@ function App() {
               </div>
             ))}
           </div>
+      </div> */}
+      <div className="container">
+        <div>
+          <h1>STELLE DEL CINEMA</h1>
+          <h2>-I MIGLIORI DI SEMPRE-</h2>
+        </div>
+        <div className="row g-3">
+          {stars.map((star) => (
+            <div key={`star-${star.id}`} className='col-12 col-md-6 col-lg-3'>
+              <div className='card rounded-0'>
+                <div className="actress-img img-thumbnail">
+                  <img src={star.image} alt="" />
+                  <div className='actress-infos text-bg-danger p-2'>
+                    <h3 className='actress-name'>{star.name}</h3>
+                    <p className='actress-birth'>{star.birth_year}</p>
+                    <p className='actress-nation'>{star.nationality}</p>
+                    <p className="actress-bio">{star.biography}</p>
+                    <p className="actress-awards">{star.awards}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
