@@ -27,6 +27,7 @@ function App() {
   return (
     <>
       <div className="container">
+        {/* Migliori Attrici */}
         <div>
           <h1>STELLE DEL CINEMA</h1>
           <h2>-LE MIGLIORI-</h2>
@@ -49,6 +50,28 @@ function App() {
             </div>
           ))}
         </div>
+        {/* Migliori Attori */}
+        <div>
+            <h2>-I MIGLIORI-</h2>
+        </div>
+          <div className="row g-3">
+            {actor.map((male) => (
+              <div key={`male-${male.id}`} className='col-12 col-md-6 col-lg-3'>
+                <div className='card rounded-0'>
+                  <div className="actress-img img-thumbnail">
+                    <img src={male.image} alt="" />
+                    <div className='actress-infos text-bg-danger p-2'>
+                      <h3 className='actress-name'>{male.name}</h3>
+                      <p className='actress-birth'>{male.birth_year}</p>
+                      <p className='actress-nation'>{male.nationality}</p>
+                      <p className="actress-bio">{male.biography}</p>
+                      <p className="actress-awards">{male.awards}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
     </>
   )
