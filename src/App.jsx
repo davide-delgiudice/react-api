@@ -20,10 +20,13 @@ function App() {
   return (
     <>
       <div className="container">
+        <div>
+          <h1>STELLE DEL CINEMA</h1>
+        </div>
         <div className="row g-3">
           {actress.map((female) => (
             <div key={`female-${female.id}`} className='col-12 col-md-6 col-lg-4'>
-              <div className='card rounded-0 d-flex flex-row'>
+              <div className='card rounded-0'>
                 <div className="actress-img">
                   <img src={female.image} alt="" />
                 </div>

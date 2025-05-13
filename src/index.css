@@ -1,0 +1,17 @@
+body{
+  background-image: url("sala-cine.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+}
+
+h1{
+  font-family: "Playwrite DK Loopet", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.actress-img img{
+  width: 200px;
+}
+
