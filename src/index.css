@@ -5,7 +5,7 @@ body{
   background-color: black;
 }
 
-h1{
+h1, h2{
   font-family: "Playwrite DK Loopet", sans-serif;
   color: white;
   text-align: center;

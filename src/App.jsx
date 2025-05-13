@@ -22,6 +22,7 @@ function App() {
       <div className="container">
         <div>
           <h1>STELLE DEL CINEMA</h1>
+          <h2>-LE MIGLIORI-</h2>
         </div>
         <div className="row g-3">
           {actress.map((female) => (
