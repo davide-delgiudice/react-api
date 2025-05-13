@@ -5,6 +5,7 @@ import axios from 'axios'
 function App() {
 
   const[actress, setActress] = useState([]);
+  const[actor, setActor] = useState([]);
 
   const fetchActress = () => {
     axios.get("https://lanciweb.github.io/demo/api/actresses/").then((response) => {
