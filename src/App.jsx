@@ -9,13 +9,19 @@ function App() {
 
   const fetchActress = () => {
     axios.get("https://lanciweb.github.io/demo/api/actresses/").then((response) => {
-      console.log(response.data);
       setActress(response.data);
+    });
+  };
+
+  const fetchActor = () => {
+    axios.get("https://lanciweb.github.io/demo/api/actors/").then((response) => {
+      setActor(response.data);
     });
   };
 
   useEffect(() =>{
     fetchActress();
+    fetchActor();
   }, []);
 
   return (
